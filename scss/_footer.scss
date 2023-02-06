@@ -1,0 +1,82 @@
+.footer{
+background-color: $darkBlue;
+padding:40px;
+padding-bottom: 0px;
+text-align: center;
+display: block;
+
+    @include breakpoint-up(large){
+        display: grid;
+  grid-template-columns: repeat(4,1fr); 
+  grid-column: 1fr;
+  grid-template-areas:"logo link1 link2 button"
+  "socials link1 link2 button" ;
+  justify-items: start;
+  text-align: start;
+    }
+  
+&__logo{
+    display: block;
+    margin-bottom: 30px;
+    grid-area: logo;
+}
+
+  &__socials{
+    
+    margin-bottom: 30px;
+    grid-area:socials;
+    a:not(:last-child){
+        margin-right: 15px;
+        
+    }
+    a svg path{
+        transition: fill 150ms ease-in-out;
+    }
+    a:hover svg path{
+        fill:$limeGreen;
+    }
+    
+    
+  }
+&__links{
+    display: flex;
+    flex-direction: column;
+    line-height: 2.25;
+    a{
+        font-size: $font-small;
+        
+        display: block;
+    color:$white;
+    transition: color 150ms ease-in-out;
+&:hover{
+    color:$limeGreen;
+}}
+
+&.cols1{
+    grid-area:link1
+}
+    
+    &.cols2{
+        grid-area:link2;
+        margin-bottom: 30px;
+    }
+    
+    
+ 
+
+}
+
+&__cta{
+    
+    @include breakpoint-up(large){grid-area:button;
+        text-align: right;}
+    
+    margin-bottom: 30px;
+    font-size: $font-small;
+}
+&__copyright{
+    grid-area:button;
+    
+    padding: 30px;
+}
+}
