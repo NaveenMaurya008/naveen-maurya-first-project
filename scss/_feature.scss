@@ -39,7 +39,7 @@ color:$darkBlue;
 
   &__grid {
    
-    @include breakpoint-up(medium) {
+    @include breakpoint-up(large) {
       display: flex;
       gap:20px;
       margin:0px 100px;
