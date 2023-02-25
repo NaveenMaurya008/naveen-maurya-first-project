@@ -1,16 +1,14 @@
 .feature{
     background-color: $lightGrayishBlue;
     padding: 70px;
-    @include breakpoint-up(medium) {
+    @include breakpoint-up(large) {
       
       &.parallax {
-        /* The image used */
+       
         background-image: url("../here-comes-the-money.svg");
       
-        /* Full height */
         
-      
-        /* Create the parallax scrolling effect */
+        
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
